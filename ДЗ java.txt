@@ -1,0 +1,60 @@
+java
+public class Market implements QueueBehaviour, MarketBehaviour {
+private Queue queue;
+
+// Конструктор класса
+public Market {
+this.queue new LinkedList<>;
+}
+}
+
+java
+@Override
+public void enqueue(String person) {
+queue.​add(person);
+}
+
+@Override
+public String dequeue {
+if (queue.​isEmpty) {
+return null;
+}
+return queue.poll;
+}
+
+java
+@Override
+public void enterMarket(String person) {
+queue.​add(person);
+}
+
+@Override
+public String leaveMarket {
+if (queue.​isEmpty) {
+return null;
+}
+return queue.​poll;
+}
+
+
+
+java
+public void update(String order) {
+System.out.​println(″Заказ ″ order ″ обработан″);
+}
+
+java
+public class Main {
+public static void main(String[] args) {
+Market market new Market;
+
+market.​enqueue(″Иван″);
+market.​enqueue(″Мария″);
+market.​enqueue(″Алексей″);
+
+String person market.​dequeue;
+System.​out.​println(person ″ покинул магазин″);
+
+market.​update(″Заказ 1″);
+}
+}
